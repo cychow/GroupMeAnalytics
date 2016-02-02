@@ -3,40 +3,6 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -264,22 +230,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -1627,40 +1577,6 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1931,22 +1847,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -3341,40 +3241,6 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -3631,22 +3497,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -5027,40 +4877,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -5336,22 +5152,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -6746,40 +6546,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -7036,22 +6802,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -8432,40 +8182,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8741,22 +8457,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -10151,40 +9851,6 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
-      "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "[7.0.1, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.Core": "[3.1.0, )",
-          "Portable.BouncyCastle-Signed": "[1.7.0.2, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll": {}
-        }
-      },
-      "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-        "dependencies": {
-          "FubarCoder.RestSharp.Portable.OAuth": "[3.1.0, )"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll": {}
-        }
-      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -10441,22 +10107,6 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "Newtonsoft.Json/7.0.1": {
-        "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Portable.BouncyCastle-Signed/1.7.0.2": {
-        "compile": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll": {}
         }
       },
       "prism.core/6.1.0": {
@@ -11838,80 +11488,6 @@
     }
   },
   "libraries": {
-    "FubarCoder.RestSharp.Portable.Core/3.1.0": {
-      "sha512": "wk2m+ep8dhZHiQcezBj+Qg3GUlpPMQ+2IxlhiIcFR4LA7ZiIBBN7GGnAv4JyJRp4yTxoeuW3lNiJwRt6q3dWrg==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "FubarCoder.RestSharp.Portable.Core.nuspec",
-        "lib/native/_._",
-        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll",
-        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.XML",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.Core.XML",
-        "license.txt",
-        "package/services/metadata/core-properties/41d1affc29ed475fa9459cb5abbcb7cd.psmdcp",
-        "tools/native/install.ps1",
-        "tools/native/uninstall.ps1"
-      ]
-    },
-    "FubarCoder.RestSharp.Portable.OAuth/3.1.0": {
-      "sha512": "WSIYfV+UUHc+G63McmPcirRaHenhfVQRURoUgcGmHZDrd/kg5Mj7eIBROd+CjApLE+gaYswXuFV53zoIR7G0WQ==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "FubarCoder.RestSharp.Portable.OAuth.nuspec",
-        "lib/MonoAndroid10/RestSharp.Portable.OAuth.dll",
-        "lib/MonoAndroid10/RestSharp.Portable.OAuth.XML",
-        "lib/MonoTouch10/RestSharp.Portable.OAuth.dll",
-        "lib/MonoTouch10/RestSharp.Portable.OAuth.XML",
-        "lib/native/_._",
-        "lib/net40/RestSharp.Portable.OAuth.dll",
-        "lib/net40/RestSharp.Portable.OAuth.XML",
-        "lib/net45/RestSharp.Portable.OAuth.dll",
-        "lib/net45/RestSharp.Portable.OAuth.XML",
-        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll",
-        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.XML",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth.XML",
-        "lib/Xamarin.iOS10/RestSharp.Portable.OAuth.dll",
-        "lib/Xamarin.iOS10/RestSharp.Portable.OAuth.XML",
-        "license.txt",
-        "package/services/metadata/core-properties/949f9768ba754a96a9dd54d952fad37b.psmdcp",
-        "tools/native/install.ps1",
-        "tools/native/uninstall.ps1"
-      ]
-    },
-    "FubarCoder.RestSharp.Portable.Oauth2/3.1.0": {
-      "sha512": "pbhVzk3iAYJC5+ChSQXmU5+ieQ+8slorKVPxdi7GaQxR6/xxWdRdKBTaM1/a3SqbRILurCsk1fdggNDAFEuchQ==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "FubarCoder.RestSharp.Portable.OAuth2.nuspec",
-        "lib/MonoAndroid10/RestSharp.Portable.OAuth2.dll",
-        "lib/MonoAndroid10/RestSharp.Portable.OAuth2.XML",
-        "lib/MonoTouch10/RestSharp.Portable.OAuth2.dll",
-        "lib/MonoTouch10/RestSharp.Portable.OAuth2.XML",
-        "lib/native/_._",
-        "lib/net40/RestSharp.Portable.OAuth2.dll",
-        "lib/net40/RestSharp.Portable.OAuth2.XML",
-        "lib/net45/RestSharp.Portable.OAuth2.dll",
-        "lib/net45/RestSharp.Portable.OAuth2.XML",
-        "lib/portable-net403+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll",
-        "lib/portable-net403+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.XML",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RestSharp.Portable.OAuth2.XML",
-        "lib/Xamarin.iOS10/RestSharp.Portable.OAuth2.dll",
-        "lib/Xamarin.iOS10/RestSharp.Portable.OAuth2.XML",
-        "license.txt",
-        "package/services/metadata/core-properties/44994bdfb6454833b3e4b1bb269360b9.psmdcp",
-        "tools/native/install.ps1",
-        "tools/native/uninstall.ps1"
-      ]
-    },
     "Microsoft.ApplicationInsights/1.0.0": {
       "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
       "type": "Package",
@@ -12613,45 +12189,6 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
-      ]
-    },
-    "Newtonsoft.Json/7.0.1": {
-      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.nuspec",
-        "package/services/metadata/core-properties/49e907fc018c4c7ab632e6d4ad4766f8.psmdcp",
-        "tools/install.ps1"
-      ]
-    },
-    "Portable.BouncyCastle-Signed/1.7.0.2": {
-      "sha512": "aBVsV7h2b0nfKUrp63MDXH181qqC7RSf/AjuUViUigyRy7CAXC9/On7Gyg/IXM3FR/wMEbjAJXvSS3SsJiet/g==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll",
-        "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.xml",
-        "lib/portable-net45+dnxcore50+wp80+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.dll",
-        "lib/portable-net45+dnxcore50+wp80+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/crypto.xml",
-        "License.html",
-        "package/services/metadata/core-properties/95e40e59096544e8bb3d698c578010f3.psmdcp",
-        "Portable.BouncyCastle-Signed.nuspec",
-        "Readme.html"
       ]
     },
     "prism.core/6.1.0": {
@@ -15378,7 +14915,6 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "FubarCoder.RestSharp.Portable.Oauth2 >= 3.1.0",
       "Microsoft.ApplicationInsights >= 1.0.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",

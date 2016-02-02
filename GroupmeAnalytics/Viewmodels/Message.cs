@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Collections.ObjectModel;
+using GroupmeAnalytics.Utils;
 using System.Globalization;
 
 namespace GroupmeAnalytics.Viewmodels {
@@ -73,9 +74,31 @@ namespace GroupmeAnalytics.Viewmodels {
         }
 
         public string MessageLiked {
-            get { return (favorites.Count > 0) ? "Pink" : "LightGray"; }
+            //get { return (favorites.Count > 0) ? "Pink" : "LightGray"; }
+            get {
+                string ColorString = "#00000000";
+                if (Favorites.Count > 0) {
+                    ColorString = "LightGray";
+                }
+                foreach(string userId in Favorites) {
+                    if (userId.Equals(JsonParser.userID)) {
+                        ColorString = "Pink";
+                        return ColorString;
+                    }
+                }
+                return ColorString;
+            }
         }
         
+        public string MessageBackground {
+            get {
+                string ColorString = "#00000000";
+                if(SenderID == JsonParser.userID) {
+                    ColorString = "PowderBlue";
+                }
+                return ColorString;
+            }
+        }
 
         public string LikeCount {
             get { return (favorites.Count > 0) ? favorites.Count.ToString() : ""; }

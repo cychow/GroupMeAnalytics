@@ -16,13 +16,16 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="300" Stroke="#FFF4F4F5" VerticalAlignment="Top" Width="300"/>
 
-        <ListView x:Name="Messages"
+        <gv:StripedListView x:Name="Messages"
                   ItemsSource="{Binding Messages}"
-                  Margin="312,145,565,8"
+                  Margin="312,145,312,8"
                   >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderBrush="{x:Null}">
+                    <StackPanel Orientation="Horizontal" 
+                                VerticalAlignment="Bottom" 
+                                HorizontalAlignment="Left"     
+                                >
                         <Image HorizontalAlignment="Center" 
 										Height="50" 
 										VerticalAlignment="Top" 
@@ -44,12 +47,12 @@
                                             FontSize="12" FontWeight="Bold"/>
                             <Image x:Name="Attachment"
                                    Source="{Binding Attachments}"
-                                   Width="270"/>
+                                   Width="540"/>
                             <TextBlock Text="{Binding Text}"
                                        Margin="8 4 0 0"
                                        Foreground="Black"
                                        TextWrapping="Wrap"
-                                       Width="270"/>
+                                       Width="540"/>
                         </StackPanel>
                         <!-- Hearts go here somewhere -->
                         <StackPanel Orientation="Vertical" 
@@ -73,7 +76,7 @@
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </gv:StripedListView>
 
             <TextBlock x:Name="groupNameBlock" 
                    HorizontalAlignment="Left" 

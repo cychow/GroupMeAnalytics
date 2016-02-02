@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using GroupmeAnalytics.Utils;
+using Windows.Data.Json;
 
 namespace GroupmeAnalytics.Views {
     /// <summary>
@@ -31,7 +32,7 @@ namespace GroupmeAnalytics.Views {
             
         }
 
-        private void AuthView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args) {
+        private async void AuthView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args) {
             // do something to capture the page
             //System.Diagnostics.Debug.WriteLine("Navigating to " + args.Uri);
             if (args.Uri == LoginURI) {
@@ -41,6 +42,12 @@ namespace GroupmeAnalytics.Views {
                 // access token found!
                 JsonParser.authToken = args.Uri.ToString().Split(new[] { "access_token=" }, StringSplitOptions.None)[1];
                 System.Diagnostics.Debug.WriteLine("Found Access Token: " + JsonParser.authToken);
+                // get user ID
+                JsonObject data = await JsonParser.getJsonResponse("/users/me", null);
+                JsonParser.userID = data.GetNamedObject("response").GetNamedString("id");
+                System.Diagnostics.Debug.WriteLine("Your ID: " + JsonParser.userID);
+
+
                 rootFrame.Navigate(typeof(GroupmeAnalytics.Views.ViewShell));
                 Window.Current.Content = rootFrame;
                 return;

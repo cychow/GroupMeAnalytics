@@ -12,6 +12,7 @@ using Windows.Data.Json;
 namespace GroupmeAnalytics.Utils {
     static class JsonParser {
         static public string authToken = "";
+        static public string userID = "";
         static public string baseURL = "https://api.groupme.com/v3";
 
         // TODO: Lots of exception handling

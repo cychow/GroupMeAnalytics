@@ -130,10 +130,10 @@ namespace GroupmeAnalytics.Views {
             var listviewitem = element as ListViewItem;
             if (listviewitem != null) {
                 var index = IndexFromContainer(element);
-                if ((index % 2) == 0) {
-                    listviewitem.Background = new SolidColorBrush(Windows.UI.Colors.White);
+                if ((DataContext as GroupViewModel).Messages.ElementAt(index).SenderID == JsonParser.userID) {
+                    listviewitem.Background = new SolidColorBrush(Windows.UI.Colors.Azure);
                 } else {
-                    listviewitem.Background = new SolidColorBrush(Windows.UI.Colors.LightGray);
+                    listviewitem.Background = new SolidColorBrush(Windows.UI.Colors.White);
                 }
             }
         }
