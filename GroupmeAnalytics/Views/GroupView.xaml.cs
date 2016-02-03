@@ -21,6 +21,7 @@ using System.Collections.ObjectModel;
 using Windows.Data.Json;
 using GroupmeAnalytics.Viewmodels;
 using GroupmeAnalytics.Utils;
+using WinRTXamlToolkit.Controls.Extensions;
 
 namespace GroupmeAnalytics.Views {
     public sealed partial class GroupView : Page {
@@ -33,6 +34,15 @@ namespace GroupmeAnalytics.Views {
         protected override void OnNavigatedTo(NavigationEventArgs e) {
             groupObject = e.Parameter as MenuItem;
             loadData();
+            var MessagesScrollbar = Messages.GetFirstDescendantOfType<ScrollViewer>();
+            var scrollbars = MessagesScrollbar.GetDescendantsOfType<ScrollBar>().ToList();
+            var VerticalBar = scrollbars.FirstOrDefault(x => x.Orientation == Orientation.Vertical);
+            if (VerticalBar != null) {
+                System.Diagnostics.Debug.WriteLine("Successfully registered");
+                VerticalBar.Scroll += MessageBar_OnScroll;
+            } else {
+                System.Diagnostics.Debug.WriteLine("Failed to find vertical bar");
+            }
         }
 
         private async void loadData() {
@@ -42,86 +52,28 @@ namespace GroupmeAnalytics.Views {
             (DataContext as GroupViewModel).groupPicture = groupObject.Source;
 
             // populate user list
-            // this really needs its own helper function
-            
-
-            JsonObject data = await JsonParser.getJsonResponse("/groups/" + groupObject.ID, null);
-
-            JsonObject groupData = data.GetNamedObject("response");
-            JsonArray members = groupData.GetNamedArray("members");
-
-            string defaultSource = "https://i.groupme.com/300x300.png.e8ec5793a332457096bc9707ffc9ac37.avatar";
-            
-
-            // System.Diagnostics.Debug.WriteLine(data.ToString());
-            foreach (var item in members) {
-                JsonObject groupObject = item.GetObject();
-                string SourceURL = groupObject.GetNamedValue("image_url").ToString().Trim('"');
-                (DataContext as GroupViewModel).Members.Add(new User() {
-
-                    UserPhoto = SourceURL == "null" ? defaultSource : SourceURL,
-                    //Source = groupObject.GetNamedString("image_url"),
-                    //Text = groupObject.GetNamedString("name")
-                    UserNick = groupObject.GetNamedString("nickname"),
-                    UserID = groupObject.GetNamedString("user_id")
-                }
-                );
-            }
-            // update count?
-            System.Diagnostics.Debug.WriteLine("Member count: " + (DataContext as GroupViewModel).Members.Count);
+            (DataContext as GroupViewModel).Members = await JsonParser.getUsers(groupObject.ID);
             (DataContext as GroupViewModel).numUsers = "Members (" + (DataContext as GroupViewModel).Members.Count + ")";
 
-            // since we still have parser let's parse some more shit
-            data = await JsonParser.getJsonResponse("/groups/" + groupObject.ID + "/messages", null);
 
-            JsonObject messageData = data.GetNamedObject("response");
-            JsonArray messages = messageData.GetNamedArray("messages");
-            foreach (JsonValue messageVal in messages) {
-                JsonObject message = messageVal.GetObject();
-                Message currentMessage = new Message();
-                try {
-                    currentMessage.Text = message.GetNamedString("text");
-                } catch (System.Runtime.InteropServices.COMException) {
-                    currentMessage.Text = "";
-                }
-                currentMessage.SenderID = message.GetNamedString("sender_id");
-                currentMessage.Sender = message.GetNamedString("name");
-                try {
-                    currentMessage.SenderPicture = message.GetNamedString("avatar_url");
-                } catch (System.Runtime.InteropServices.COMException) {
-                    currentMessage.SenderPicture = "";
-                }
-                //System.Diagnostics.Debug.WriteLine("Message sender avatar url: " + currentMessage.SenderPicture);
-                currentMessage.ID = message.GetNamedString("id");
-                currentMessage.TimeStamp = message.GetNamedNumber("created_at").ToString();
-                currentMessage.Members = (DataContext as GroupViewModel).Members;
-                JsonArray attachments = (message.GetNamedArray("attachments") as JsonArray);
-                if (attachments.Count != 0) {
-                    try {
-                        System.Diagnostics.Debug.WriteLine(attachments.First().GetObject().GetNamedValue("url").ToString().Trim('"'));
-                        currentMessage.Attachments = attachments.First().GetObject().GetNamedValue("url").ToString().Trim('"');
-                    } catch (System.Exception) {
-                        // if it's a mention don't handle it
-                    }
-                }
-                
-                foreach (JsonValue favoriter in message.GetNamedArray("favorited_by")) {
-                    if (favoriter.ValueType == JsonValueType.Null) {
-                        break;
-                    }
-                    currentMessage.Favorites.Add(favoriter.ToString().Trim('"'));
-                }
-                (DataContext as GroupViewModel).Messages.Insert(0,currentMessage);                
-            }
+            (DataContext as GroupViewModel).Messages = await JsonParser.getMessages(groupObject.ID, (DataContext as GroupViewModel).Members, new DateTime(2016,1,1,0,0,0));
+            
             // Add a reference to the members to the messages            
             // Now scroll the listbox to the bottom
             Messages.ScrollIntoView(Messages.Items.Last());
             
         }
-        
 
-        
-        
+        private void MessageBar_OnScroll(object sender, ScrollEventArgs e) {
+            if (e.ScrollEventType != ScrollEventType.EndScroll) return;
+            if ((sender as ScrollBar) == null) return;
+
+            System.Diagnostics.Debug.WriteLine(e.NewValue.ToString());
+            if (e.NewValue <= (sender as ScrollBar).Minimum) {
+                System.Diagnostics.Debug.WriteLine("Top of Messages!");
+
+            }
+        }
     }
 
     public class StripedListView : ListView {

@@ -28,10 +28,12 @@ namespace GroupmeAnalytics.Viewmodels {
         }
         public ObservableCollection<User> Members {
             get { return members; }
+            set { SetProperty(ref members, value); }
         }
 
         public ObservableCollection<Message> Messages {
             get { return messages; }
+            set { SetProperty(ref messages, value); }
         }
     }
 }

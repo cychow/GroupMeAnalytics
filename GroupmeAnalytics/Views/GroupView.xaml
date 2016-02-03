@@ -18,7 +18,7 @@
 
         <gv:StripedListView x:Name="Messages"
                   ItemsSource="{Binding Messages}"
-                  Margin="312,145,312,8"
+                  Margin="312,87,312,66"
                   >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -78,7 +78,7 @@
             </ListView.ItemTemplate>
         </gv:StripedListView>
 
-            <TextBlock x:Name="groupNameBlock" 
+        <TextBlock x:Name="groupNameBlock" 
                    HorizontalAlignment="Left" 
                    TextWrapping="Wrap" 
                    Text="{Binding groupName}" 
@@ -132,6 +132,19 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+            <TextBox x:Name="textBox"
+                     TextWrapping="Wrap" 
+                     Text="" 
+                     Margin="311,653,383,-3" 
+                     BorderThickness="1" 
+                     BorderBrush="{x:Null}" 
+                     Height="70" 
+                     PlaceholderText="Send Message..." 
+                     AcceptsReturn="True" 
+                     FontSize="16"
+                     VerticalAlignment="Center"/>
+            <AppBarButton x:Name="appBarButton" HorizontalAlignment="Stretch" Icon="Send" Label="Send" VerticalAlignment="Stretch" Margin="898,654,312,-4" Width="Auto" BorderBrush="#FF7A7A7A" BorderThickness="1"/>
+
 
     </Grid>
 </Page>
